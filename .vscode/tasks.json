@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "options": {
+        "cwd": "/home/sl/Desktop/test/build",
+        // "cwd": "${workspaceFolder}/build"
+    },
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "cmake",
+            "options": {
+                "cwd": "/home/sl/Desktop/test/build"
+            },
+            "command": "cmake",
+            "args": [
+                ".."
+            ]
+        },
+        {
+            "label": "make",
+            "command":"make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build",
+            "dependsOrder": "sequence",
+            "dependsOn":[
+                "cmake",
+                "make"
+            ]
+        }
+    ]
+}
