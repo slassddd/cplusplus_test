@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "test build",
+            "name": "mutex_uniquelock",
             "type": "cppdbg",
             "request": "launch",
             "program": "/home/sl/Desktop/test/build/main_mutex_uniquelock",
@@ -24,6 +24,27 @@
             ],
             "preLaunchTask": "Build",
             "miDebuggerPath": "/usr/bin/gdb"
-        }
+        },
+        {
+            "name": "vector_list",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/home/sl/Desktop/test/build/main_vector_list",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "/home/sl/Desktop/test",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }        
     ]
 }
